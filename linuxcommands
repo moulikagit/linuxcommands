@@ -1,0 +1,124 @@
+# linuxcommands
+Command	                              Description
+sudo	                           Execute a command with root permissions
+
+cd ~	                           Change directory to HOME.
+
+ echo 'text'                     Prints text
+
+date                             The date command is used to display date, time, time zone, and more.
+   usasge  : date   ( date +%y-%m-%d   24-05-14 )
+
+pwd                             The pwd command is used to display the location of the current working directory
+    usage : pwd
+
+su                              switch user , it allows access of the Linux shell to another user.
+    usage : su kmoulika
+
+useradd                         The useradd command is used to add or remove a user on a Linux server.
+    usage : sudo useradd kmoulika
+
+passwd                          The passwd command is used to create and change the password for a user.
+     usage : sudo passwd kmoulika
+
+mkdir                          	Create a new directory
+   usage : mkdir devopstest
+cd ..	                           Move up one directory level.
+
+cd ../..	                        Change to the previous (two level ) directory . 
+
+cd devopstest                    	Change location to a specified directory.
+  
+ls	                            List files and directories in the current directory.
+    usage : ls devopstest
+
+ls -al                         	List all files and directories in the current directory (shows hidden files).
+    usage : ls -al devopstest
+
+touch                         	Create a new, empty file, or update the modified time of an existing one
+    usage : touch practicefile.txt
+
+vi/vim                            open a file (create file) there is vi mode,command mode & insert mode
+    usage : vi test5
+           esc +i (to insert content)
+          to save :wq!
+
+cat > file	                    Create a new file with the text you type after
+    usage : cat > devops2  ( ctrl + D to save file )
+
+cat file	                      View the contents of a file
+     usage : cat devops2
+ 
+rm or rmdir                   	Remove a file or empty directory
+    usage : rm devops2
+
+rm -rf                         	Remove a directory or fie forcefully | Remove a directory that isn’t empty
+    usage : rm -rf practicefile.txt
+
+mv	                            Move or rename a file or directory
+   usage : mv <file name> <directory path>  
+
+cp	                            Copy a file or directory
+    usage : cp <existing file name> <new file name>
+
+chmod	                          Change the file permissions for a file or directory
+    usage : chmod 777 devopstest
+
+chown	                          Change the owner of a file or directory
+    usage : chown moulika:admin /tmp/file
+
+chgrp	                          Change the group of a file or directory
+    usage : chgrp GROUPNAME FILE
+
+head                           The head command is used to display the content of a file. It displays the first 10 lines of a file.
+   usage : head devopstest
+
+tail                           it displays the last ten lines of the file content. 
+   usage : tail devopstest
+
+tac                            The tac command is the reverse of cat command, as its name specified. It displays the file content in reverse order (from the last line).
+   usage : tac devopstest
+
+more                           The more command is quite similar to the cat command,  in case of larger files, the more command displays screenful output at a time.
+                               ENTER key: To scroll down page by line,Space bar: To move to the next page.
+   usage : more devopstest
+
+grep	                          View the contents of a file that match a pattern, it is useful for searching the content from a file.
+    usage : devopstest | grep moulika
+
+ps	                            List active processes.
+    usage : ps
+
+top                           	See all running processes.
+    usage : top 
+
+ping                             The ping command is used to check the connectivity between two nodes
+   usage ping www.google.com
+curl URL                          Sends a request to a URL and returns the response
+     usage : curl www.goole.com
+
+wget URL                           Download files from the web
+      usage : wget https://github/moulikagit/may2024/moulika/linuxcommands
+
+ awk                                A versatile programming language for working on files.
+      usage : awk '{print $1,$4}' devops.txt
+
+ df -h                              Disk usage in human readable format
+
+ find / -name filename               Finds a file or a directory by its name starting from root
+       usage : find / -name devopstest 
+
+ ifconfig                            Displays IP addresses of all network interfaces
+
+scp                                  Transfers files between hosts over ssh
+
+ usage : scp [file_name]  remoteuser@remotehost:/remote/directory   (scp test.txt moulika@10.143.90.2:/home/mehera)
+
+netstat                          It allows users to display network-related information and diagnose various networking issues
+    usage : netstat -an | grep ':22'
+
+kill [process_id]               	Terminate a Linux process under a given ID.
+    usage : kill devopstest
+
+exit                              To logout
+    usage : exit
